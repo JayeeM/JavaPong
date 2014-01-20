@@ -1,0 +1,39 @@
+
+public class Ball {
+	double x;
+	double y;
+	double xv;
+	double yv;
+	public Ball(int newx , int newy){
+		x= newx;
+		y=newy;
+	}
+	public void draw(){
+		Zen.setColor(214,163,33);
+		Zen.fillOval((int)x-5, (int)y-5, 10, 10);
+	}
+	public void move(){
+		x=x+ xv;
+		y=y+yv;
+		if((x+5>=800)||(x-5<=0) )
+			bounceHorizontally();
+		if((y+5>=500)||(y-5<=0) )
+			bounceVertically();
+		
+	}
+	public void bounceHorizontally(){
+		xv=-1*xv;
+	}
+	public void bounceVertically(){
+		yv=-1*yv;
+	}
+	public void setPosition(double newx, double newy){
+		x= newx;
+		y=newy;
+	}
+	public void setVelocity(double newx, double newy ){
+		xv=newx;
+		yv=newy;
+	}
+}
+
