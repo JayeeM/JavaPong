@@ -1,0 +1,30 @@
+public class Player {
+char up;
+char down;
+int red;
+int green;
+int blue;
+int score=0;
+int x;
+int y;
+ public Player (int number){
+	if(number==1){
+		x=780;
+		y=250;
+		up='q';
+		down='a';
+		red= 25;
+		green=180;
+		blue=177;
+	}
+	if(number==2){
+		x=20;
+		y=250;
+		up='p';
+		down='l';
+		red= 179;
+		green=17;
+		blue=176;
+	}
+}
+}
